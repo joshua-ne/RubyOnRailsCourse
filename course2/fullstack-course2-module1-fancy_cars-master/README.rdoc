@@ -1,0 +1,20 @@
+= Starting application
+
+1. Remove Gemfile.lock
+
+2. Add into Gemfile
+
+        # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+        gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+3. Install all packets:
+
+        $ bundle install
+
+4. Make migration:
+
+        $ rake db:migrate RAILS_ENV=development 
+
+5. Start server:
+
+        $ rails s

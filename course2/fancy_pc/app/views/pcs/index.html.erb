@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpu</th>
+      <th>Ram</th>
+      <th>Hd</th>
+      <th>Make</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcs.each do |pc| %>
+      <tr>
+        <td><%= pc.cpu %></td>
+        <td><%= pc.ram %></td>
+        <td><%= pc.hd %></td>
+        <td><%= pc.make %></td>
+        <td><%= link_to 'Show', pc %></td>
+        <td><%= link_to 'Edit', edit_pc_path(pc) %></td>
+        <td><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pc', new_pc_path %>

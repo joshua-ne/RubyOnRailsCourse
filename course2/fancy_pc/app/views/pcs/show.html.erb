@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpu:</strong>
+  <%= @pc.cpu %>
+</p>
+
+<p>
+  <strong>Ram:</strong>
+  <%= @pc.ram %>
+</p>
+
+<p>
+  <strong>Hd:</strong>
+  <%= @pc.hd %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @pc.make %>
+</p>
+
+<%= link_to 'Edit', edit_pc_path(@pc) %> |
+<%= link_to 'Back', pcs_path %>
